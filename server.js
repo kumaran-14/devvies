@@ -1,16 +1,23 @@
 const app = require('express')()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const passport = require('passport')
 const PORT = process.env.PORT || 5000
 const db = require('./config/keys').mongoURI
 const users = require('./routes/api/users')
 const posts = require('./routes/api/posts')
 const profile = require('./routes/api/profile')
 
-
 mongoose.connect(db, { useNewUrlParser: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => consolusersuserse.error(err))
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
+app.use(passport.initialize())
+require('./config/passport')(passport)
+
 
 app.use('/api/users', users)
 app.use('/api/posts', posts)

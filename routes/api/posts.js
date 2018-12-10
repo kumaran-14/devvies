@@ -4,6 +4,7 @@ const passport = require('passport')
 const Post = require('../../models/Post')
 const Profile = require('../../models/Profile')
 const User = require('../../models/User')
+const validatePostInput = require('../../validation/post');
 
 // @route    GET /api/posts/test
 // @desc     Test route

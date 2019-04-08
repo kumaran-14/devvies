@@ -13,7 +13,7 @@ A online community for developers. Showcase your projects in style, post in Q & 
 
 ### Frameworks / Libraries
 
-*Devvies* is build from a number of open source projects
+*Devvies* is built from a number of open source projects
 
 * [ReactJS] - A JavaScript library for building user interfaces
 * [Redux] - A predictable state container for JavaScript apps.
